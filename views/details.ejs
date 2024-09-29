@@ -1,0 +1,37 @@
+<%- include("partial/header")%>
+  <%- include("partial/nav")%>
+    <!--  -->
+    <div class="d-flex w-100 mt-5 px-5">
+      <img style="height: 80vh;object-fit: contain;object-position: center;" class="w-50" src="/images/<%= book.poster%>" alt="">
+
+      <div class="w-50 px-5" class="rounded p-5 mt-5 container ">
+        <h1 class=" fs-1 fw-bolder">Book Details</h1>
+        <small>
+          <%= book.createdAt.toLocaleTimeString()%> | <%= book.createdAt.toLocaleDateString()%>
+        </small>
+        <h1 class="mt-4 fs-1">
+          <%= book.name%>
+        </h1>
+        <small class="fs-6">
+          <%= book.author%>
+        </small>
+
+        <p class="mt-4 mb-4 bg-light p-3 rounded">
+          <%= book.description%>
+        </p>
+
+        <h5 class="mb-2">
+          <%= book.isbn%>
+        </h5>
+        <h1 class="mb-3 text-success">Price ₹<%= book.price%>
+        </h1>
+        <a href="/update/<%= book._id%>" class="btn btn-primary">Update Book</a>
+        <a href="/delete/<%= book._id%>" class="btn btn-danger">Delete Book</a>
+      </div>
+
+    </div>
+
+
+
+    <!--  -->
+    <%- include("partial/footer")%>
