@@ -16,7 +16,6 @@ router.get('/', function(req, res, next) {
 });
 
 
-
 router.get('/library', async function(req, res, next) {
   try{
     const books = await BookCollection.find();
