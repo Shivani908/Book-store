@@ -2,8 +2,6 @@ var express = require('express');
 var router = express.Router();
 const path = require("path");
 const fs = require("fs");
-
-
 const BookCollection = require('../models/BookSchema');
 const { checkPrice } = require("../utils/middlewares");
 const upload = require("../utils/multer");
