@@ -2,6 +2,7 @@ var express = require('express');
 var router = express.Router();
 const path = require("path");
 const fs = require("fs");
+
 const BookCollection = require('../models/BookSchema');
 const { checkPrice } = require("../utils/middlewares");
 const upload = require("../utils/multer");
@@ -12,7 +13,6 @@ const {sendMail} = require("../utils/sendmail")
 router.get('/', function(req, res, next) {
   res.render('index');
 });
-
 
 router.get('/library', async function(req, res, next) {
   try{
